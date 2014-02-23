@@ -1,0 +1,79 @@
+.container{
+  max-width: 480px;
+  min-height: 600px;
+  font-size: 16px;
+}
+
+.innerWrap > div {
+  display: none;
+  text-align: center;
+  min-height: 600px;
+}
+
+.img{
+  width: 80%;
+}
+
+#start-game{
+  margin-top: 96px;
+}
+
+#player-names{
+  min-height: 100px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+#names-entered{
+  display: none;
+}
+
+.identity{
+  display: none;
+}
+
+.select-mission-member{
+  height: 45px;
+  line-height: 45px;
+  font-size: 1.3em;
+}
+
+.select-mission-member:hover{
+  background-color: #F7F7F9;
+}
+
+.select-mission-member.selected{
+  background-color: #F7F7F9;
+  font-weight: bold;
+}
+
+.mission-member-count {
+  font-weight: bold;
+}
+
+button.submit-vote {
+  display: none;
+}
+
+.voted {
+  font-weight: bold;
+  font-size: 1.6em;
+}
+
+.mission-leader{
+  font-weight: bold;
+}
+
+.spy-won, .resistance-won {
+  display: none;
+}
+
+.mission-result-is {
+  font-weight: bold;
+}
+
+.next-round {
+  display: none;
+}

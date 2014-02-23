@@ -1,43 +1,134 @@
 <!DOCTYPE html>
-<!--
-    Licensed to the Apache Software Foundation (ASF) under one
-    or more contributor license agreements.  See the NOTICE file
-    distributed with this work for additional information
-    regarding copyright ownership.  The ASF licenses this file
-    to you under the Apache License, Version 2.0 (the
-    "License"); you may not use this file except in compliance
-    with the License.  You may obtain a copy of the License at
-
-    http://www.apache.org/licenses/LICENSE-2.0
-
-    Unless required by applicable law or agreed to in writing,
-    software distributed under the License is distributed on an
-    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
-     KIND, either express or implied.  See the License for the
-    specific language governing permissions and limitations
-    under the License.
--->
 <html>
-    <head>
-        <meta charset="utf-8" />
-        <meta name="format-detection" content="telephone=no" />
-        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
-        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
-        <link rel="stylesheet" type="text/css" href="css/index.css" />
-        <title>Hello World</title>
-    </head>
-    <body>
-        <div class="app">
-            <h1>PhoneGap</h1>
-            <div id="deviceready" class="blink">
-                <p class="event listening">Connecting to Device</p>
-                <p class="event received">Device is Ready</p>
-            </div>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/this-is-a-stylesheet.css">
+
+    <script type="text/javascript" src = "js/jquery.min.js"></script>
+    <script type="text/javascript" src = "js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="js/underscore.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/backbone.min.js"></script>
+
+    <script type="text/javascript" src="js/missionPlayerNumbers.js"></script>
+    <script type="text/javascript" src="js/ui.js"></script>
+    <script type="text/javascript" src="js/game.js"></script>
+  </head>
+  <body>
+    <div class="container text-center wrapper">
+      <div class="container text-center innerWrap">
+        <div class='landing'>
+          <h1>Resistance</h1>
+          <button id="start-game" class="btn btn-primary">Shall we begin?</button>
         </div>
-        <script type="text/javascript" src="phonegap.js"></script>
-        <script type="text/javascript" src="js/index.js"></script>
-        <script type="text/javascript">
-            app.initialize();
-        </script>
-    </body>
+
+        <div class='num-of-players'>
+          <h1>How many players?</h1>
+          <select id="num-players">
+            <option value=5>5</option>
+            <option value=6>6</option>
+            <option value=7>7</option>
+            <option value=8>8</option>
+            <option value=9>9</option>
+            <option value=10>10</option>
+          </select>
+          <button id='submit-num-players' class= 'btn btn-primary'>Continue</button>
+        </div>
+
+        <div class="player-names">
+          <h1>Enter player names in clockwise order, hit return</h1>
+          <div>
+            <div id="player-names">
+              <ul id="names-list">
+
+              </ul>
+            </div>
+            <label>Name</label>
+            <input type='text' id='player-name'></input>
+          </div>
+
+          <button class='btn btn-primary' id="names-entered">Continue</button>
+        </div>
+
+        <div class="find-out">
+          <h1><span class='name'></span>, find out your identity</h1>
+
+          <div class="individual-identity">
+            <button class='btn btn-danger reveal-identity'>Click here if you dare</button>
+            <p class='identity'>
+              <p>When you're done, click Continue and pass to the player to the left.</p>
+            </p>
+
+            <button class='btn btn-primary pass-to-left'>Continue</button>
+          </div>
+        </div>
+
+        <div class="mission-vote">
+          <div>
+            Rejection Count is currently <span class='rejection-count'></span>. Five rejections and spies automatically win.
+          </div>
+          <div>
+            Resistance Score: <span class='resistance-score'></span>, Spy Score: <span class='spy-score'></span>
+          </div>
+          <h3>
+            Mission <span class='mission-number'></span>: <span class='mission-players-num'></span> players
+          </h3>
+          <p>
+            Mission requires <span class='fails-required'></span> fails. Wink wink, you spies.
+          </p>
+          <p>
+            <span class="mission-leader"></span> is the leader of this mission. Choose the players who you trust for this mission.
+          </p>
+          <p>
+            Does the group approve?
+          </p>
+          <button class='btn btn-primary mission-yes'>Yay</button>
+          <button class='btn btn-danger mission-no'>Nay</button>
+        </div>
+
+        <div class="select-mission-members">
+          Select the <span class='mission-member-count'></span> players to go on this mission:
+          <div id='mission-players-list'>
+          </div>
+          <button class='btn btn-primary send-on-mission' disabled='disabled'>Send'em on the mission</button>
+        </div>
+
+        <div class="mission-voting">
+          <h3><span class="voting-player-name"></span>, choose to succeed or fail this mission</h3>
+
+          <div class='mission-success-failure-buttons'>
+            <button class='btn btn-primary'>SUCCESS</button><br/>
+            <button class='btn btn-primary'>FAILURE</button><br/>
+          </div>
+
+          <button class='btn btn-primary submit-vote'>Submit your vote</button>
+        </div>
+
+        <div class='mission-result'>
+          <p>Drumrolls please...</p>
+          <p>
+            Mission <span class='mission-result-is'></span>!
+          </p>
+          <p>
+            <span class='success-votes-count'></span> success votes and <span class='fail-votes-count'></span> fail votes
+          </p>
+          <br/>
+          <button class='btn btn-primary next-round'>Continue</button>
+        </div>
+
+        <div class='game-result'>
+          <div class='spy-won'>
+          <img src="http://i.imgur.com/kiZ1pJx.jpg" style="width: 80%;">
+          <h3>Everyday I'm hustlin</h3>
+          </div>
+          <div class='resistance-won'>
+            <img src="http://i.imgur.com/4oxxMri.jpg" style="width: 80%;">
+            <h3>And I would have gotten away with it too, if it weren't for you meddling kids</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
