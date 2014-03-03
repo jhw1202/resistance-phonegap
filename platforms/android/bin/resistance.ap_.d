@@ -62,14 +62,7 @@
 /home/philip/Desktop/resistance/platforms/android/assets/www/res/screen/ios/screen-iphone-landscape-2x.png \
 /home/philip/Desktop/resistance/platforms/android/assets/www/res/screen/ios/screen-iphone-portrait-2x.png \
 /home/philip/Desktop/resistance/platforms/android/assets/www/res/screen/bada/screen-portrait.png \
-/home/philip/Desktop/resistance/platforms/android/assets/www/res/screen/android/screen-xhdpi-portrait.png \
 /home/philip/Desktop/resistance/platforms/android/assets/www/res/screen/android/screen-mdpi-portrait.png \
-/home/philip/Desktop/resistance/platforms/android/assets/www/res/screen/android/screen-mdpi-landscape.png \
-/home/philip/Desktop/resistance/platforms/android/assets/www/res/screen/android/screen-hdpi-landscape.png \
-/home/philip/Desktop/resistance/platforms/android/assets/www/res/screen/android/screen-ldpi-portrait.png \
-/home/philip/Desktop/resistance/platforms/android/assets/www/res/screen/android/screen-xhdpi-landscape.png \
-/home/philip/Desktop/resistance/platforms/android/assets/www/res/screen/android/screen-ldpi-landscape.png \
-/home/philip/Desktop/resistance/platforms/android/assets/www/res/screen/android/screen-hdpi-portrait.png \
 /home/philip/Desktop/resistance/platforms/android/assets/www/res/screen/tizen/README.md \
 /home/philip/Desktop/resistance/platforms/android/assets/www/res/icon/bada-wac \
 /home/philip/Desktop/resistance/platforms/android/assets/www/res/icon/windows-phone \
